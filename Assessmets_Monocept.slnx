@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="ArrayofAccounts/ArrayofAccounts.csproj" />
+  <Project Path="University_Course_Enrollment/University_Course_Enrollment.csproj" />
+</Solution>

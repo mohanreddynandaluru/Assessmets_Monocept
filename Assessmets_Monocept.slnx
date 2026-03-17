@@ -1,5 +1,6 @@
 <Solution>
   <Project Path="../ProductApp/ProductApp/ProductApp.csproj" />
   <Project Path="ArrayofAccounts/ArrayofAccounts.csproj" />
+  <Project Path="PigDice/PigDice.csproj" Id="d21967bc-2e9e-4acb-a852-4528e4e27225" />
   <Project Path="University_Course_Enrollment/University_Course_Enrollment.csproj" />
 </Solution>

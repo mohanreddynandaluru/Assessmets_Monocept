@@ -15,7 +15,7 @@ namespace BankMultiLevelInheritance
         private const int PointsPerDeposit = 10;   // 10 points per deposit
         private const int PointsPerWithdraw = 5;    // 5 points per withdrawal
 
-        public PremiumSavings(string accNo, string name, double balance, double interest, string cardType)
+        public PremiumSavings(string accNo, string name, decimal balance, decimal interest, string cardType)
             : base(accNo, name, balance, interest)
         {
             CardType = cardType;
@@ -23,7 +23,7 @@ namespace BankMultiLevelInheritance
         }
 
         // Override Deposit - earn points on every deposit
-        public override void Deposit(double amount)
+        public override void Deposit(decimal amount)
         {
             base.Deposit(amount);
             LoyaltyPoints += PointsPerDeposit;
@@ -32,7 +32,7 @@ namespace BankMultiLevelInheritance
         }
 
         // Override Withdraw - earn points on every withdrawal
-        public override void Withdraw(double amount)
+        public override void Withdraw(decimal amount)
         {
             if (amount > Balance)
             {
@@ -57,7 +57,7 @@ namespace BankMultiLevelInheritance
             else
             {
                 LoyaltyPoints -= points;
-                double cashValue = points * 0.1; // 1 point = 0.5 rupees
+                decimal cashValue = points * 0.1m; // 1 point = 0.1 currency unit per point
                 Balance += cashValue;
                 Console.WriteLine($"Redeemed Points : {points}");
                 Console.WriteLine($"Cash Added      : Rs.{cashValue}");

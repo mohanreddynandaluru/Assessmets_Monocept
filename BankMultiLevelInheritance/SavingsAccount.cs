@@ -8,9 +8,9 @@ namespace BankMultiLevelInheritance
 {
     internal class SavingsAccount : Account
     {
-        public double InterestRate;
+        public decimal InterestRate;
 
-        public SavingsAccount(string accNo, string name, double balance, double interest)
+        public SavingsAccount(string accNo, string name, decimal balance, decimal interest)
             : base(accNo, name, balance)
         {
             InterestRate = interest;
@@ -18,7 +18,7 @@ namespace BankMultiLevelInheritance
 
         public void AddInterest()
         {
-            double interest = Balance * InterestRate / 100;
+            decimal interest = Balance * InterestRate / 100;
             Balance += interest;
             Console.WriteLine($"Interest Added : {interest}");
             Console.WriteLine($"New Balance    : {Balance}");

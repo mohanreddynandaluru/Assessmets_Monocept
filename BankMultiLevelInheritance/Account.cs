@@ -10,23 +10,23 @@ namespace BankMultiLevelInheritance
     {
         public string AccountNumber;
         public string HolderName;
-        public double Balance;
+        public decimal Balance;
 
-        public Account(string accNo, string name, double balance)
+        public Account(string accNo, string name, decimal balance)
         {
             AccountNumber = accNo;
             HolderName = name;
             Balance = balance;
         }
 
-        public virtual void Deposit(double amount)
+        public virtual void Deposit(decimal amount)
         {
             Balance += amount;
             Console.WriteLine($"Deposited      : {amount}");
             Console.WriteLine($"New Balance    : {Balance}");
         }
 
-        public virtual void Withdraw(double amount)
+        public virtual void Withdraw(decimal amount)
         {
             if (amount > Balance)
                 Console.WriteLine("Insufficient Balance!");
